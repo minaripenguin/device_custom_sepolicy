@@ -1,6 +1,12 @@
 type hal_lineage_powershare_default, domain;
+type hal_lineage_powershare_default_exec, exec_type, vendor_file_type, file_type;
+
 binder_use(hal_lineage_powershare_default);
+
 hal_server_domain(hal_lineage_powershare_default, hal_lineage_powershare)
 
-type hal_lineage_powershare_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_lineage_powershare_default)
+
+allow hal_lineage_powershare_default sysfs_batteryinfo:dir search;
+allow hal_lineage_powershare_default sysfs_wlc:dir search;
+allow hal_lineage_powershare_default sysfs_wlc:file rw_file_perms;

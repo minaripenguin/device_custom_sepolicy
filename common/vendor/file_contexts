@@ -19,3 +19,9 @@
 
 # Wi-Fi HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service\.legacy u:object_r:hal_wifi_default_exec:s0
+
+# Pixel touch HAL
+/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.pixel                         u:object_r:hal_lineage_touch_default_exec:s0
+
+# Pixel PowerShare HAL
+/vendor/bin/hw/vendor\.lineage\.powershare-service\.pixel             u:object_r:hal_lineage_powershare_default_exec:s0
